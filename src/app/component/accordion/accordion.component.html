@@ -1,0 +1,41 @@
+<div class="jumbotron">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+               
+                <form name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
+                    <div class="form-group">
+                        <label for="firstName">Nome completo</label>
+                        <input type="text" class="form-control" name="firstName" [(ngModel)]="model.firstName" #firstName="ngModel" [ngClass]="{ 'is-invalid': f.submitted && firstName.invalid }" required />
+                        <div *ngIf="f.submitted && firstName.invalid" class="invalid-feedback">
+                            <div *ngIf="firstName.errors.required">Campo nome é obrigatório</div>
+                        </div>
+                    </div>
+                    <br/>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="text" class="form-control" name="email" [(ngModel)]="model.email" #email="ngModel" [ngClass]="{ 'is-invalid': f.submitted && email.invalid }" required email />
+                        <div *ngIf="f.submitted && email.invalid" class="invalid-feedback">
+                            <div *ngIf="email.errors.required">Campo email é obrigatório</div>
+                            <div *ngIf="email.errors.email">Insira uma email válido</div>
+                        </div>
+                    </div>
+                    <br/>
+                    <div class="form-group">
+                        <label for="pergunta">Pergunta</label>
+                        <textarea type="text" class="form-control" name="pergunta" [(ngModel)]="model.pergunta" #pergunta="ngModel" [ngClass]="{ 'is-invalid': f.submitted && pergunta.invalid }" required></textarea>
+                        <div *ngIf="f.submitted && pergunta.invalid" class="invalid-feedback">
+                            <div *ngIf="pergunta.errors.required">Campo pergunta é obrigatório</div>
+                        </div>
+                    </div>
+                    <br/>
+                    
+                    <div class="form-group">
+                        <button class="btn btn-primary">Enviar</button>
+                    </div>
+                    
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
