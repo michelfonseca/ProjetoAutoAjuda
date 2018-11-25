@@ -12,7 +12,7 @@ export const ROUTES: RouteInfo[] = [
     submenu: []
   },
   {
-    path: '/starter',
+    path: '/component/carousel',
     title: 'Início',
     icon: 'mdi mdi-gauge',
     class: '',

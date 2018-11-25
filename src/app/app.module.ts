@@ -21,6 +21,7 @@ import { AppComponent } from './app.component';
 import { SpinnerComponent } from './shared/spinner.component';
 
 import { NgxAuthFirebaseUIModule } from 'ngx-auth-firebaseui';
+import { NgbdCarouselBasicComponent } from './component/carousel/carousel.component';
 
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
@@ -37,6 +38,7 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     NavigationComponent,
     BreadcrumbComponent,
     SidebarComponent
+
   ],
   imports: [
     NgxAuthFirebaseUIModule.forRoot({

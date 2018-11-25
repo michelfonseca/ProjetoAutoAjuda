@@ -7,6 +7,8 @@ import { NgbPanelChangeEvent } from '@ng-bootstrap/ng-bootstrap';
 })
 export class NgbdAccordionBasicComponent {
 
+  nrSelect:string = "47" 
+
   model: any = {};
 
   onSubmit() {

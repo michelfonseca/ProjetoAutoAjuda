@@ -9,7 +9,7 @@ export const Approutes: Routes = [
     path: '',
     component: FullComponent,
     children: [
-      { path: '', redirectTo: '/starter', pathMatch: 'full' },
+      { path: '', redirectTo: '/component/carousel', pathMatch: 'full' },
       {
         path: 'starter',
         loadChildren: './starter/starter.module#StarterModule'

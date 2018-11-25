@@ -1,60 +1,56 @@
-<div class="row">
-    <div class="col-12">
-        <div class="card">
-            <div class="card-body">
-                <h3 class="card-title">Basic Alert</h3>
-                <h6 class="card-subtitle">This is basic alert</h6>
-                <ngb-alert [dismissible]="false">
-                    <strong>Warning!</strong> Better check yourself, you're not looking too good.
-                  </ngb-alert>
-                    
-            </div>
-        </div>
-        <div class="card">
-            <div class="card-body">
-                <h3 class="card-title">Closeable Alert</h3>
-                <h6 class="card-subtitle">This is closeable alert</h6>
-                <p *ngFor="let alert of alerts">
-                  <ngb-alert [type]="alert.type" (close)="closeAlert(alert)">{{ alert.message }}</ngb-alert>
-                </p>
-                <p>
-                  <button type="button" class="btn btn-primary" (click)="reset()">Reset</button>
-                </p>
-                    
-            </div>
-        </div>
+<div class="jumbotron"> 
+    <div class="container">
+        <div class="row">
+            <form name="forme" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
+                    <div class="form-group">
+                        <label for="firstName"><i><b>Fabio Taffe Respondeu:</b></i></label>
+                     <br />
+                        <output>Boa Tarde, temos através da Unisep, uma Psicóloga que 
+                                irá lhe auxiliar no que for preciso, e, claro que a Unisep
+                                dispõe de varias formas de financiamento, sendo eles, PROUNI, FIES e CREDU.
+                                <br />
+                                O FIES é um programa de financiamento do Governo Federal que objetiva
+                                inserir e incentivar o aluno a cursar o Ensino Superior nas instituições de ensino privadas do Brasil.
+                                <br />
+                                A UNISEP disponibiliza o FIES para todos os seus cursos, tanto no campus de Dois Vizinhos,
+                                quanto no campus de Francisco Beltrão. 
+                                <br />
+                                O Credu é a forma institucional, exclusiva da UNISEP, de facilitar o acesso do aluno no Ensino Superior. 
+                                Trata-se de um Crédito Educativo onde o acadêmico se responsabiliza parte do pagamento das mensalidades
+                                enquanto estuda e o remanescente depois de formado.
+                                ProUni - Programa Universidade para Todos: Programa do Governo Federal que oferece bolsas de estudos aos
+                                acadêmicos
+                                de qualquer curso da UNISEP.
+                                As bolsas do ProUni são distribuídas de duas formas: 
+                                1. Bolsas integrais: são de 100%, cobrindo o valor total das mensalidades. 
+                                Ou seja, o aluno não tem custos com mensalidades para estudar
+                                na faculdade particular. Esse tipo de bolsa é reservado para quem tem renda familiar mensal de até um 
+                                salário e meio por pessoa.
+                                <br />
+                                2. Bolsas parciais: são de 50%, cobrindo do valor parcial das mensalidades.
+                                A outra metade deve ser paga pelo estudante, que pode conciliar a bolsa parcial com o programa
+                                de Financiamento Estudantil do Governo Federal, o FIES (é preciso atender alguns
+                                requisitos para usar os dois benefícios juntos).
+                                Esse tipo de bolsa é para quem apresenta renda familiar mensal de até três salários mínimos por pessoa.
+                        </output>
+                    </div>   
 
-        <div class="card">
-            <div class="card-body">
-                <h3 class="card-title">Self Closing  Alert</h3>
-                <h6 class="card-subtitle">Static self-closing alert that disappears after 20 seconds (refresh the page if it has already disappeared)</h6>
-                <ngb-alert *ngIf="!staticAlertClosed" (close)="staticAlertClosed = true">Check out our awesome new features!</ngb-alert>
-                <p>Show a self-closing success message that disappears after 5 seconds.</p>
-                <ngb-alert *ngIf="successMessage" type="success" (close)="successMessage = null">{{ successMessage }}</ngb-alert>   
-                <p>
-                  <button class="btn btn-primary" (click)="changeSuccessMessage()">Change message</button>
-                </p>
-            </div>
-        </div>
+                    <div class="form-group">
+                        <output>Michel Fonseca:</output>
+                        <input type="text" 
+                               class="form-control"
+                               name="responder"
+                               [(ngModel)]="model.responder"
+                               #responder="ngModel"
+                               [ngClass]="{ 'is-invalid': f.submitted && firstName.invalid }" required />
+                    </div>
 
-        <div class="card">
-            <div class="card-body">
-                <h3 class="card-title">Custom Alert</h3>
-                <p>
-                  <ngb-alert type="custom" [dismissible]="false"><strong>Whoa!</strong> This is a custom alert.</ngb-alert>
-                </p>
-            </div>
-        </div>
 
-        <div class="card">
-            <div class="card-body">
-                <h3 class="card-title">Global Configuration of Alert</h3>
-                <p>
-                  <ngb-alert>
-                    This alert's type is success and it's not dismissible because the config has been customized
-                  </ngb-alert>
-                </p>
-            </div>
+                    <div class="form-group">
+                        <button class="btn btn-primary">Responder</button>
+                        <button class="btn btn-primary">Cancelar</button>
+                    </div>
+            </form>
         </div>
     </div>
 </div>

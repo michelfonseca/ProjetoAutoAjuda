@@ -70,6 +70,10 @@ export class NgbdAlertBasicComponent implements OnInit {
   public changeSuccessMessage() {
     this._success.next(`${new Date()} - Message successfully changed.`);
   }
+
+  /*onSubmit() {
+    alert('Sucesso!! :-)\n\n' + JSON.stringify(this._success))
+  }*/
 }
 
 export interface IAlert {
