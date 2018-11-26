@@ -3,7 +3,7 @@ import { RouteInfo } from './sidebar.metadata';
 export const ROUTES: RouteInfo[] = [
   {
     path: '',
-    title: 'Dashboard',
+    title: 'Início',
     icon: '',
     class: 'nav-small-cap',
     label: '',
@@ -13,8 +13,8 @@ export const ROUTES: RouteInfo[] = [
   },
   {
     path: '/component/carousel',
-    title: 'Início',
-    icon: 'mdi mdi-gauge',
+    title: 'Home',
+    icon: 'mdi mdi-home',
     class: '',
     label: '',
     labelClass: '',
@@ -49,6 +49,16 @@ export const ROUTES: RouteInfo[] = [
     label: '',
     labelClass: '',
     extralink: false,
+    submenu: []
+  },
+  {
+    path: '',
+    title: 'Para você',
+    icon: '',
+    class: 'nav-small-cap',
+    label: '',
+    labelClass: '',
+    extralink: true,
     submenu: []
   },
   {
