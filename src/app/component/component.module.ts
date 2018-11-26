@@ -1,3 +1,7 @@
+import { VgBufferingModule } from 'videogular2/buffering';
+import { VgOverlayPlayModule } from 'videogular2/overlay-play';
+import { VgCoreModule } from 'videogular2/core';
+import { VgControlsModule } from 'videogular2/controls';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
@@ -20,7 +24,11 @@ import { NgbdModalBasicComponent } from './modal/modal.component';
     FormsModule,
     ReactiveFormsModule,
     JsonpModule,
-    NgbModule
+    NgbModule,
+    VgCoreModule,
+    VgControlsModule,
+    VgOverlayPlayModule,
+    VgBufferingModule
   ],
   declarations: [
     NgbdpregressbarBasicComponent,

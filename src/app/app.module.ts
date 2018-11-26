@@ -22,6 +22,10 @@ import { SpinnerComponent } from './shared/spinner.component';
 
 import { NgxAuthFirebaseUIModule } from 'ngx-auth-firebaseui';
 
+import {VgCoreModule} from 'videogular2/core';
+import {VgControlsModule} from 'videogular2/controls';
+import {VgOverlayPlayModule} from 'videogular2/overlay-play';
+import {VgBufferingModule} from 'videogular2/buffering';
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true,
@@ -36,8 +40,7 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     FullComponent,
     NavigationComponent,
     BreadcrumbComponent,
-    SidebarComponent
-
+    SidebarComponent,
   ],
   imports: [
     NgxAuthFirebaseUIModule.forRoot({
@@ -55,7 +58,12 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     HttpClientModule,
     NgbModule.forRoot(),
     RouterModule.forRoot(Approutes),
-    PerfectScrollbarModule
+    PerfectScrollbarModule,
+    BrowserModule,
+    VgCoreModule,
+    VgControlsModule,
+    VgOverlayPlayModule,
+    VgBufferingModule
   ],
   providers: [
     {

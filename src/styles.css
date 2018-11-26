@@ -5,7 +5,6 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 
-
 .ps .ps__scrollbar-y-rail {
     left: 3px;
     right: auto;

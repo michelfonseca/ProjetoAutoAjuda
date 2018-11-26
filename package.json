@@ -50,6 +50,7 @@
     "popper.js": "^1.12.5",
     "rxjs": "^6.3.3",
     "rxjs-compat": "^6.0.0-rc.0",
+    "videogular2": "^6.3.0",
     "zone.js": "^0.8.4"
   },
   "devDependencies": {
@@ -58,6 +59,7 @@
     "@angular/compiler-cli": "^7.0.0",
     "@angular/language-service": "^7.0.0",
     "@types/chartist": "^0.9.37",
+    "@types/core-js": "^2.5.0",
     "@types/jasmine": "~2.5.53",
     "@types/jasminewd2": "~2.0.2",
     "@types/jquery": "^3.2.5",

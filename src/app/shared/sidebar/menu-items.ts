@@ -50,5 +50,15 @@ export const ROUTES: RouteInfo[] = [
     labelClass: '',
     extralink: false,
     submenu: []
+  },
+  {
+    path: '/component/modal',
+    title: 'Depoimentos',
+    icon: 'mdi mdi-heart-box',
+    class: '',
+    label: '',
+    labelClass: '',
+    extralink: false,
+    submenu: []
   }
 ];

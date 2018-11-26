@@ -27,7 +27,8 @@
                         ],
                         "styles": [
                             "src/styles.css",
-                            "src/assets/scss/style.scss"
+                            "src/assets/scss/style.scss",
+                            "node_modules/videogular2/fonts/videogular.css"
                         ],
                         "scripts": []
                     },
