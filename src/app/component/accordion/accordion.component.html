@@ -3,28 +3,53 @@
         <div class="row">
             <div class="col-md-6 offset-md-3">
                
-                <form name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
+                <form (ngSubmit)="onSubmit()">
                     <label for="problema">Qual seu problema?</label>
-                    <select [(ngModel)]='nrSelect' class='form-control' (change)="ChangingValue($event)" [value]='47'>
-                                <option value='47'>Relacionamento</option>
-                                <option value='46'>Financeira</option>
-                                <option value='45'>Desmotivação</option>
-                                <option value='44'>Outros...</option>
+                    <select required [(ngModel)]="teste" class='form-control' [value]='Relacionamento'>
+                                <option value='Relacionamento - '>Relacionamento</option>
+                                <option value='Financeiro - '>Financeiro</option>
+                                <option value='Desmotivação - '>Desmotivação</option>
+                                <option value='Outros - '>Outros...</option>
                         </select>
                     <br/><br/>
                     <div class="form-group">
-                        <label for="pergunta">Pergunta</label>
-                        <textarea type="text" class="form-control" name="pergunta" [(ngModel)]="model.pergunta" #pergunta="ngModel" [ngClass]="{ 'is-invalid': f.submitted && pergunta.invalid }" required></textarea>
-                        <div *ngIf="f.submitted && pergunta.invalid" class="invalid-feedback">
-                            <div *ngIf="pergunta.errors.required">Campo pergunta é obrigatório</div>
-                        </div>
+                        <label for="item">O que está acontecendo?</label> 
+                        <textarea type="text" class="form-control" id="item" required [(ngModel)]="itemValue" name="item" ></textarea>
                     </div>
-                  
-                    <div class="form-group">
-                        <button class="btn btn-primary">Enviar</button>
-                    </div>  
+         
+                    <div class="btn-group">
+                        <button type="submit" class="btn btn-success">Enviar</button>
+                    </div>
                 </form>
             </div>
         </div>
     </div>
-</div>
+    </div>
+
+    <div class="jumbotron">
+    <div class="container">
+            <form>
+                <label><b>Perguntas Realizadas:</b></label>
+                        <label *ngFor="let item of items | async"> {{item.content}} </label>
+            </form>
+        </div>
+        </div>
+
+        <!--<div style="width: 300px;">
+            <form (ngSubmit)="onSubmit()">
+                <div class="form-group">
+                    <label for="item">Item</label> <input type="text"
+                        class="form-control" placeholder="Enter content..." id="item"
+                        required [(ngModel)]="itemValue" name="item">
+                </div>
+     
+                <div class="btn-group">
+                    <button type="submit" class="btn btn-success">Submit</button>
+                </div>
+            </form>
+        </div>
+     
+        <h2>Content from Firebase</h2>
+        <div class="col-md-3">
+            <pre *ngFor="let item of items | async"> {{item.content}} </pre>
+        </div>-->

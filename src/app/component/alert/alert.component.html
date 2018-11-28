@@ -1,13 +1,19 @@
+<style>
+    .btn-success {
+    margin-right: 10px;
+}
+</style>
+
 <div class="jumbotron"> 
     <div class="container">
         <div class="row">
-            <form name="forme" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
+            <form name="forme" (ngSubmit)="f.form.valid" #f="ngForm" novalidate>
                     <div class="form-group">
-                        <label for="firstName"><b>Fabio Taffe respondeu:</b></label>
+                        <label for="firstName"><b>Coordenador Fábio Taffe respondeu:</b></label>
                      <br />
-                        <output>Boa Tarde, temos através da Unisep, uma Psicóloga que 
-                                irá lhe auxiliar no que for preciso, e, claro que a Unisep
-                                dispõe de varias formas de financiamento, sendo eles, PROUNI, FIES e CREDU.
+                        <output>Boa Tarde, Michel, tudo bem? 
+                                <br />
+                                A Unisep dispõe de varias formas de financiamento, sendo eles, PROUNI, FIES e CREDU.
                                 <br />
                                 O FIES é um programa de financiamento do Governo Federal que objetiva
                                 inserir e incentivar o aluno a cursar o Ensino Superior nas instituições de ensino privadas do Brasil.
@@ -40,14 +46,13 @@
                         <input type="text" 
                                class="form-control"
                                name="responder"
-                               [(ngModel)]="model.responder"
-                               #responder="ngModel"
-                               [ngClass]="{ 'is-invalid': f.submitted && firstName.invalid }" required />
+                               [ngClass]="{ 'is-invalid': f.submitted }" required />
                     </div>
 
 
                     <div class="form-group">
-                        <button class="btn btn-primary">Enviar</button>
+                        <button type="submit" class="btn btn-success">Responder</button>
+                        <button type="close" class="btn btn-danger">Encerrar</button>
                     </div>
             </form>
         </div>

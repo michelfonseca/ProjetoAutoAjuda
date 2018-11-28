@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { NgbPanelChangeEvent } from '@ng-bootstrap/ng-bootstrap';
+import { Observable } from '../../../../node_modules/rxjs';
+import { AngularFireDatabase } from '../../../../node_modules/angularfire2/database';
 
 @Component({
   selector: 'app-ngbd-accordion-basic',
@@ -7,11 +9,17 @@ import { NgbPanelChangeEvent } from '@ng-bootstrap/ng-bootstrap';
 })
 export class NgbdAccordionBasicComponent {
 
-  nrSelect:string = "47" 
-
   model: any = {};
 
+  itemValue = '';
+  items: Observable<any[]>;
+ 
+  constructor(public db: AngularFireDatabase) {
+    this.items = db.list('items').valueChanges();
+  }
+ 
   onSubmit() {
-    alert('Sucesso!! :-)\n\n' + JSON.stringify(this.model))
+    this.db.list('/items').push({ content: this.itemValue });
+    this.itemValue = '';
   }
 }
