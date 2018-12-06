@@ -30,7 +30,9 @@
                             "src/assets/scss/style.scss",
                             "node_modules/videogular2/fonts/videogular.css"
                         ],
-                        "scripts": []
+                        "scripts": [
+                            { "input": "node_modules/fullcalendar/dist/locale/pt.js" }
+                        ]
                     },
                     "configurations": {
                         "production": {
@@ -75,7 +77,8 @@
                         "polyfills": "src/polyfills.ts",
                         "tsConfig": "src/tsconfig.spec.json",
                         "scripts": [
-                            "node_modules/jquery/dist/jquery.min.js"
+                            "node_modules/jquery/dist/jquery.min.js",
+                            { "input": "node_modules/fullcalendar/dist/locale/pt.js" }
                         ],
                         "styles": [
                             "src/styles.css",

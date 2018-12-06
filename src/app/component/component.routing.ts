@@ -1,3 +1,4 @@
+
 import { Routes } from '@angular/router';
 
 import { NgbdpregressbarBasicComponent } from './progressbar/progressbar.component';
@@ -5,6 +6,7 @@ import { NgbdAccordionBasicComponent } from './accordion/accordion.component';
 import { NgbdAlertBasicComponent } from './alert/alert.component';
 import { NgbdCarouselBasicComponent } from './carousel/carousel.component';
 import { NgbdModalBasicComponent } from './modal/modal.component';
+import { CalendarioComponent } from './calendario/calendario.component';
 
 export const ComponentsRoutes: Routes = [
   {
@@ -38,6 +40,13 @@ export const ComponentsRoutes: Routes = [
         path: 'modal',
         component: NgbdModalBasicComponent,
         data: {
+        }
+      },
+      {
+        path: 'calendario',
+        component: CalendarioComponent,
+        data: {
+          
         }
       }
     ]

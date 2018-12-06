@@ -1,5 +1,5 @@
 <style>
-    .btn-success {
+    .btn-info {
     margin-right: 10px;
 }
 </style>
@@ -43,16 +43,54 @@
 
                     <div class="form-group">
                         <output>Michel Fonseca:</output>
-                        <input type="text" 
-                               class="form-control"
+                        <textarea type="text" 
+                               class="form-control shadow p-3 mb-5 bg-white rounded"
                                name="responder"
-                               [ngClass]="{ 'is-invalid': f.submitted }" required />
+                               required data-toggle="tooltip" data-placement="bottom" title="Escreva uma réplica"></textarea>
                     </div>
 
 
                     <div class="form-group">
-                        <button type="submit" class="btn btn-success">Responder</button>
-                        <button type="close" class="btn btn-danger">Encerrar</button>
+                        <button type="submit" class="btn btn-info" data-toggle="tooltip" data-placement="bottom" title="Envie sua réplica">Responder</button>
+                        <button type="close" class="btn btn-danger" data-toggle="tooltip" data-placement="bottom" title="Encerre o seu problema">Encerrar</button>
+                    </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="jumbotron"> 
+    <div class="container">
+        <div class="row">
+            <form name="forme" (ngSubmit)="f.form.valid" #f="ngForm" novalidate>
+                    <div class="form-group">
+                        <label for="firstName"><b>Coordenador Fábio Taffe respondeu:</b></label>
+                     <br />
+                        <output>Olá, tudo bem? 
+                                <br />
+                                Eu sei que relacionamentos são complicados em sala de aula.
+                                <br />
+                                O ideal é que você procura se relacionar com pessoas que possam ter o mesmo interesse que você.
+                                <br />
+                                Essas pessoas, muitas vezes, podem nem ser da sua aula. Então mantenha-se sempre aberto as amizades.
+                                <br />
+                                Pode ficar tranquilo que 4 anos passam rápido e você vai conseguir passar por essa com maestria. Se sentir que 
+                                não está conseguindo lidar com isso, venha na minha sala, sem medo para que possamos vencer isso.
+                        </output>
+                    </div>   
+
+                    <div class="form-group">
+                        <output>Michel Fonseca <b>[Anônimo]</b>:</output>
+                        <textarea type="text" 
+                               class="form-control shadow p-3 mb-5 bg-white rounded"
+                               name="responder"
+                               required data-toggle="tooltip" data-placement="bottom" title="Escreva uma réplica"></textarea>
+                    </div>
+
+
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-info" data-toggle="tooltip" data-placement="bottom" title="Envie sua réplica">Responder</button>
+                        <button type="close" class="btn btn-danger" data-toggle="tooltip" data-placement="bottom" title="Encerre o seu problema">Encerrar</button>
                     </div>
             </form>
         </div>

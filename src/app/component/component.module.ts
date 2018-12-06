@@ -1,3 +1,4 @@
+import { FullCalendarModule } from 'ng-fullcalendar';
 import { VgBufferingModule } from 'videogular2/buffering';
 import { VgOverlayPlayModule } from 'videogular2/overlay-play';
 import { VgCoreModule } from 'videogular2/core';
@@ -16,6 +17,7 @@ import { NgbdAccordionBasicComponent } from './accordion/accordion.component';
 import { NgbdAlertBasicComponent } from './alert/alert.component';
 import { NgbdCarouselBasicComponent } from './carousel/carousel.component';
 import { NgbdModalBasicComponent } from './modal/modal.component';
+import { CalendarioComponent } from './calendario/calendario.component';
 
 @NgModule({
   imports: [
@@ -28,14 +30,16 @@ import { NgbdModalBasicComponent } from './modal/modal.component';
     VgCoreModule,
     VgControlsModule,
     VgOverlayPlayModule,
-    VgBufferingModule
+    VgBufferingModule,
+    FullCalendarModule
   ],
   declarations: [
     NgbdpregressbarBasicComponent,
     NgbdAccordionBasicComponent,
     NgbdAlertBasicComponent,
     NgbdCarouselBasicComponent,
-    NgbdModalBasicComponent
+    NgbdModalBasicComponent,
+    CalendarioComponent
   ]
 })
 export class ComponentsModule {}

@@ -5,7 +5,7 @@ export const ROUTES: RouteInfo[] = [
     path: '',
     title: 'Início',
     icon: '',
-    class: 'nav-small-cap',
+    class: 'nav-small-cap ',
     label: '',
     labelClass: '',
     extralink: true,
@@ -33,8 +33,8 @@ export const ROUTES: RouteInfo[] = [
   },
   {
     path: '/component/accordion',
-    title: 'Perguntas',
-    icon: 'mdi mdi-equal',
+    title: 'Desabafos',
+    icon: 'mdi mdi-voice',
     class: '',
     label: '',
     labelClass: '',
@@ -59,7 +59,7 @@ export const ROUTES: RouteInfo[] = [
     label: '',
     labelClass: '',
     extralink: true,
-    submenu: []
+    submenu: [],
   },
   {
     path: '/component/modal',

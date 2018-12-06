@@ -1,3 +1,4 @@
+import { FullCalendarModule } from 'ng-fullcalendar';
 import { environment } from './../environments/environment';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -57,6 +58,7 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   }),
     CommonModule,
     BrowserModule,
+    FullCalendarModule,
     BrowserAnimationsModule,
     FormsModule,
     HttpClientModule,

@@ -1,0 +1,14 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.6.1/fullcalendar.min.css">
+<div style="text-align:center">
+
+  <div class="jumbotron">
+    <div class="container">
+              <h1 class="display-4"> Agendamento de Consultas </h1>
+
+              <div *ngIf="calendarOptions" id="calendar">
+
+                <ng-fullcalendar [options]="calendarOptions"></ng-fullcalendar>
+              </div>
+            </div> 
+  </div>
+</div>
